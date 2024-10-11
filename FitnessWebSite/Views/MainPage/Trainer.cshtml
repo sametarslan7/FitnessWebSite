@@ -1,0 +1,22 @@
+﻿@using FitnessWebSite.Models.Classes
+@model List<Trainer>
+
+
+
+<div class="down-content">
+    @foreach (var x in Model)
+    {
+        <span>@x.trainerMajor</span>
+        <h4>@x.trainerName</h4>
+        <p>@x.trainerDescription</p>
+        <p><strong>Tecrübe - </strong> @x.trainerExperience yıl</p>
+        <p><strong>Aktif Üye Sayısı - </strong> @x.trainerActiveMember</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+    }
+
+</div>
