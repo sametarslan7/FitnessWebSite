@@ -2,21 +2,28 @@
 @model List<Trainer>
 
 
+@foreach (var x in Model)
+{
+    <div class="col-lg-4">
+        <div class="trainer-item">
+            <div class="image-thumb">
+                <img src="~/fitnessWeb/assets/images/first-trainer.jpg" alt="">
+            </div>
+            <div class="down-content">
 
-<div class="down-content">
-    @foreach (var x in Model)
-    {
-        <span>@x.trainerMajor</span>
-        <h4>@x.trainerName</h4>
-        <p>@x.trainerDescription</p>
-        <p><strong>Tecrübe - </strong> @x.trainerExperience yıl</p>
-        <p><strong>Aktif Üye Sayısı - </strong> @x.trainerActiveMember</p>
-        <ul class="social-icons">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-        </ul>
-    }
+                <span>@x.trainerMajor</span>
+                <h4>@x.trainerName</h4>
+                <p>@x.trainerDescription</p>
+                <p><strong>Tecrübe - </strong> @x.trainerExperience yıl</p>
+                <p><strong>Aktif Üye Sayısı - </strong> @x.trainerActiveMember</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}
 
-</div>

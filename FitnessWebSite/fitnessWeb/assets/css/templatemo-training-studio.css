@@ -668,10 +668,19 @@ features
 #features {
   margin-bottom: 80px;
 }
-
+.features-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Her program için minimum yüksekliði ayarlayýn */
+    padding: 20px;
+    border: 1px solid #ddd; /* Ýsteðe baðlý: Her programýn etrafýnda bir çerçeve oluþturur */
+}
 .feature-item {
-  display: inline-block;
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-item .left-icon img {
@@ -681,6 +690,7 @@ features
 
 .feature-item .right-content {
   display: inline;
+  flex-grow: 1;
 }
 
 .feature-item .right-content h4 {

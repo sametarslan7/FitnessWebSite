@@ -13,6 +13,7 @@ namespace FitnessWebSite.Models.Classes
         public DbSet<GroupClass> GroupClasses {  get; set; } 
         public DbSet<PrivateProgram> Programs {  get; set; } 
         public DbSet<Trainer> Trainers {  get; set; } 
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }

@@ -22,6 +22,16 @@ namespace FitnessWebSite.Controllers
             var deger = c.Trainers.ToList();
             return PartialView(deger);
         }
+        public PartialViewResult PrivateProgram()
+        {
+            var deger =c.Programs.ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult GroupClass()
+        {
+            var deger = c.GroupClasses.ToList();
+            return PartialView(deger);
+        }
 
     }
 }

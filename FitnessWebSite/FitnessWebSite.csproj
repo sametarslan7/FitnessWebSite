@@ -133,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Classes\Admin.cs" />
     <Compile Include="Models\Classes\Context.cs" />
     <Compile Include="Models\Classes\FreeProgram.cs" />
     <Compile Include="Models\Classes\GroupClass.cs" />
@@ -190,7 +191,10 @@
     <Content Include="fitnessWeb\assets\js\popper.js" />
     <Content Include="fitnessWeb\assets\js\scrollreveal.min.js" />
     <Content Include="fitnessWeb\assets\js\waypoints.min.js" />
+    <Content Include="fitnessWeb\gymfoto.jpg" />
     <Content Include="fitnessWeb\index.html" />
+    <Content Include="fitnessWeb\sign.css" />
+    <Content Include="fitnessWeb\sign.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -238,6 +242,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\MainPage\Index.cshtml" />
     <Content Include="Views\MainPage\Trainer.cshtml" />
+    <Content Include="Views\MainPage\PrivateProgram.cshtml" />
+    <Content Include="Views\MainPage\GroupClass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

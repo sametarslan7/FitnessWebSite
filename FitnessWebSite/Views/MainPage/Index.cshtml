@@ -102,54 +102,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="~/fitnessWeb/assets/images/features-first-icon.png" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Fitness</h4>
-                                <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
-                                <a href="#" class="text-button">Get Contact for This Program</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="~/fitnessWeb/assets/images/features-first-icon.png" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>New Gym Training</h4>
-                                <p>If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.</p>
-                                <a href="#" class="text-button">Get Contact for This Program</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="~/fitnessWeb/assets/images/features-first-icon.png" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>Advanced Muscle Course</h4>
-                                <p>You may want to browse through <a rel="nofollow" href="https://templatemo.com/tag/digital-marketing" target="_parent">Digital Marketing</a> or <a href="https://templatemo.com/tag/corporate">Corporate</a> HTML CSS templates on our website.</p>
-                                <a href="#" class="text-button">Get Contact for This Program</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="~/fitnessWeb/assets/images/features-first-icon.png" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>Yoga Training</h4>
-                                <p>This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
-                                <a href="#" class="text-button">Get Contact for This Program</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                @Html.Action("PrivateProgram", "MainPage")
             </div>
         </div>
     </section>
@@ -181,24 +134,7 @@
                 </div>
             </div>
             <div class="row" id="tabs">
-                <div class="col-lg-4">
-                    <ul>
-                        <li><a href='#tabs-1'><img src="~/fitnessWeb/assets/images/tabs-first-icon.png" alt="">First Training Class</a></li>
-                        <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <section class='tabs-content'>
-                        <article id='tabs-1'>
-                            <img src="~/fitnessWeb/assets/images/training-image-01.jpg" alt="First Class">
-                            <h4>First Training Class</h4>
-                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-                            <div class="main-button">
-                                <a href="#">View Schedule</a>
-                            </div>
-                        </article>
-                    </section>
-                </div>
+                @Html.Action("GroupClass","MainPage")
             </div>
         </div>
     </section>
@@ -223,23 +159,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
+                    <div><div class="section-heading">
                         <h2>Expert <em>Trainers</em></h2>
                         <img src="~/fitnessWeb/assets/images/line-dec.png" alt="">
                         <p>Spor salonumuzun deneyimli antrenörleri, fitness hedeflerinize ulaşmanız için sizi en iyi şekilde yönlendirmek üzere burada. Kişisel antrenman programlarıyla güçlü ve sağlıklı bir yaşam tarzına adım atın!</p>
-                    </div>
+                    </div></div>
                 </div>
             </div>
-            
+
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="~/fitnessWeb/assets/images/first-trainer.jpg" alt="">
-                        </div>
-                        @Html.Action("Trainer", "MainPage")
-                    </div>
-                </div>
+
+                @Html.Action("Trainer", "MainPage")
+
             </div>
         </div>
     </section>

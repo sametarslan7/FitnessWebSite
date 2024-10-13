@@ -1,0 +1,25 @@
+﻿@using FitnessWebSite.Models.Classes
+@model List<GroupClass>
+
+@foreach (var x in Model)
+{
+    <div class="col-lg-4">
+        <ul>
+            <li><a href='#tabs-1'><img src="~/fitnessWeb/assets/images/tabs-first-icon.png" alt="">@x.className</a></li>
+            <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
+        </ul>
+    </div>
+    <div class="col-lg-8">
+        <section class='tabs-content'>
+            <article id='tabs-1'>
+                <img src="~/fitnessWeb/assets/images/training-image-01.jpg" alt="First Class">
+                <h4>@x.className</h4>
+                <p>@x.classDetail</p>
+                <div class="main-button">
+                    <a href="#">View Schedule</a>
+                </div>
+            </article>
+        </section>
+    </div>
+}
+
