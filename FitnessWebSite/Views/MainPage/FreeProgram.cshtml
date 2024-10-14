@@ -1,0 +1,16 @@
+﻿@using FitnessWebSite.Models.Classes
+@model List<FreeProgram>
+
+@foreach (var x in Model)
+{
+    <div class="col-lg-4">
+        <div class="program-card">
+            <h4>@x.freeProgramName</h4>
+            <p>@x.freeProgramDetail</p>
+            <div class="main-button">
+                <a href="~/fitnessWeb/assets/files/cardio-program.pdf" download>Download Program</a>
+            </div>
+        </div>
+    </div>
+}
+
