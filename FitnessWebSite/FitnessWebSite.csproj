@@ -184,6 +184,7 @@
     <Content Include="fitnessWeb\assets\js\accordions.js" />
     <Content Include="fitnessWeb\assets\js\bootstrap.min.js" />
     <Content Include="fitnessWeb\assets\js\custom.js" />
+    <Content Include="fitnessWeb\assets\js\groupclass.js" />
     <Content Include="fitnessWeb\assets\js\imgfix.min.js" />
     <Content Include="fitnessWeb\assets\js\jquery-2.1.0.min.js" />
     <Content Include="fitnessWeb\assets\js\jquery.counterup.min.js" />

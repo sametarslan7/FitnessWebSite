@@ -1,7 +1,8 @@
 ﻿@using FitnessWebSite.Models.Classes
 @model List<GroupClass>
 
-@foreach (var x in Model)
+
+@*@foreach (var x in Model)
 {
     <div class="col-lg-4">
         <ul>
@@ -21,5 +22,38 @@
             </article>
         </section>
     </div>
-}
+}*@
+
+
+<div class="row" id="tabs">
+    <!-- Sol tarafta Class isimleri -->
+    <div class="col-lg-4">
+        <ul>
+            @foreach (var x in Model)
+            {
+                <li>
+                    <a href="javascript:void(0);" class="tab-link" data-id="@x.id">@x.className</a>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <!-- Sağ tarafta Class detayları -->
+    <div class="col-lg-8">
+        <section class='tabs-content'>
+            @foreach (var x in Model)
+            {
+                <article id="class-content-@x.id" class="class-content" style="display: none;">
+                    <img src="~/fitnessWeb/assets/images/training-image-01.jpg" alt="First Class">
+                    <h4>@x.className</h4>
+                    <p>@x.classDetail</p>
+                    <div class="main-button">
+                        <a href="#">View Schedule</a>
+                    </div>
+                </article>
+            }
+        </section>
+    </div>
+</div>
+
 
