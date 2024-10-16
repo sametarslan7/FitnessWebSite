@@ -1,0 +1,81 @@
+﻿@model FitnessWebSite.Models.Classes.Trainer
+
+@{
+    ViewBag.Title = "NewTrainer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row no-gutters">
+    <div class="col-md-7">
+        <div class="contact-wrap w-100 p-md-5 p-4">
+            <h3 class="mb-4">Add Private Program</h3>
+            <div id="form-message-warning" class="mb-4"></div>
+            <div id="form-message-success" class="mb-4">
+                Your message was sent, thank you!
+            </div>
+            <form method="post" id="contactForm" name="contactForm" class="contactForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @*<label class="label" for="name">Program Name </label>*@
+                            @Html.LabelFor(x => x.trainerName, new { @class = "label", @for = "name" })
+                            @*<input type="text" class="form-control" name="name" id="name" placeholder="Name">*@
+                            @Html.TextBoxFor(x => x.trainerName, new { @class = "form-control", @name = "name", @type = "text", @id = "name", @placeholder = "Name" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @*<label class="label" for="#">Program Detail</label>*@
+                            @Html.LabelFor(x => x.trainerMajor, new { @class = "label", @for = "#" })
+                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                            @Html.TextBoxFor(x => x.trainerMajor, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Major" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @*<label class="label" for="#">Program Detail</label>*@
+                            @Html.LabelFor(x => x.trainerDescription, new { @class = "label", @for = "#" })
+                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                            @Html.TextBoxFor(x => x.trainerDescription, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Description" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @*<label class="label" for="#">Program Detail</label>*@
+                            @Html.LabelFor(x => x.trainerProfilePhoto, new { @class = "label", @for = "#" })
+                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                            @Html.TextBoxFor(x => x.trainerProfilePhoto, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Profil Photo Link" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @*<label class="label" for="#">Program Detail</label>*@
+                            @Html.LabelFor(x => x.trainerExperience, new { @class = "label", @for = "#" })
+                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                            @Html.TextBoxFor(x => x.trainerExperience, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Experience" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @*<label class="label" for="#">Program Detail</label>*@
+                            @Html.LabelFor(x => x.trainerActiveMember, new { @class = "label", @for = "#" })
+                            @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                            @Html.TextBoxFor(x => x.trainerActiveMember, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Active Member" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button class="btn btn-success">Add Trainer</button>
+                            <div class="submitting"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-5 d-flex align-items-stretch">
+        <div class="info-wrap w-100 p-5 img" style="background-image: url(../../AdminWeb/contact-form-03/images/personaltrainer.jpg);">
+        </div>
+    </div>
+</div>
+

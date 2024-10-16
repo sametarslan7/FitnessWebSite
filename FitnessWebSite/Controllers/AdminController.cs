@@ -36,6 +36,18 @@ namespace FitnessWebSite.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult NewPrivateProgram()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewPrivateProgram(PrivateProgram p)
+        {
+            c.Programs.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("PrivateProgramList");
+        }
 
         //FREE PROGRAM
 
@@ -57,6 +69,18 @@ namespace FitnessWebSite.Controllers
             fr.freeProgramFilePath = f.freeProgramFilePath;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult NewFreeProgram()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewFreeProgram(FreeProgram f)
+        {
+            c.FreePrograms.Add(f);
+            c.SaveChanges();
+            return RedirectToAction("FreeProgramList");
         }
 
         //GROUP LESSONS
@@ -80,7 +104,18 @@ namespace FitnessWebSite.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [HttpGet]
+        public ActionResult NewGroupLesson()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewGroupLesson (GroupClass g)
+        {
+            c.GroupClasses.Add(g);
+            c.SaveChanges();
+            return RedirectToAction("GroupLessonsList");
+        }
         //TRAINERS
 
         public ActionResult TrainerList()
@@ -104,6 +139,18 @@ namespace FitnessWebSite.Controllers
             tr.trainerActiveMember = t.trainerActiveMember;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult NewTrainer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewTrainer(Trainer t)
+        {
+            c.Trainers.Add(t);
+            c.SaveChanges();
+            return RedirectToAction("TrainerList");
         }
     }
 }

@@ -14,8 +14,8 @@ namespace FitnessWebSite.Models.Classes
         public string trainerMajor { get; set; }
         public string trainerDescription { get; set; }
         public string trainerProfilePhoto {  get; set; }
-        public int trainerExperience { get; set; }
-        public int trainerActiveMember { get; set; }
+        public int? trainerExperience { get; set; }
+        public int? trainerActiveMember { get; set; }
 
     }
 }
