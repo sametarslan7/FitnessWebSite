@@ -1,0 +1,69 @@
+﻿@model FitnessWebSite.Models.Classes.FreeProgram
+
+
+@{
+    ViewBag.Title = "GetFreeProgram";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateFreeProgram", "Admin", FormMethod.Post))
+{
+    <div class="row no-gutters">
+        <div class="col-md-7">
+            <div class="contact-wrap w-100 p-md-5 p-4">
+                <h3 class="mb-4">Add Private Program</h3>
+                <div id="form-message-warning" class="mb-4"></div>
+                <div id="form-message-success" class="mb-4">
+                    Your message was sent, thank you!
+                </div>
+                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @*<label class="label" for="name">Program ID </label>*@
+                                @Html.LabelFor(x => x.id, new { @class = "label", @for = "name" })
+                                @*<input type="text" class="form-control" name="name" id="name">*@
+                                @Html.TextBoxFor(x => x.id, new { @class = "form-control", @name = "name", @readonly = "readonly", @type = "text", @id = "name", @placeholder = "Name" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @*<label class="label" for="name">Program Name </label>*@
+                                @Html.LabelFor(x => x.freeProgramName, new { @class = "label", @for = "name" })
+                                @*<input type="text" class="form-control" name="name" id="name" placeholder="Name">*@
+                                @Html.TextBoxFor(x => x.freeProgramName, new { @class = "form-control", @name = "name", @type = "text", @id = "name", @placeholder = "Free Program Name" })
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @*<label class="label" for="#">Program Detail</label>*@
+                                @Html.LabelFor(x => x.freeProgramDetail, new { @class = "label", @for = "#" })
+                                @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                                @Html.TextBoxFor(x => x.freeProgramDetail, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Free Program Detail"})
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @*<label class="label" for="#">Program Detail</label>*@
+                                @Html.LabelFor(x => x.freeProgramFilePath, new { @class = "label", @for = "#" })
+                                @*<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>*@
+                                @Html.TextBoxFor(x => x.freeProgramFilePath, new { @class = "form-control", @name = "message", @id = "message", @placeholder = "Free Program File Path"})
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" value="Update Program" class="btn btn-primary">
+                                <div class="submitting"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5 d-flex align-items-stretch">
+            <div class="info-wrap w-100 p-5 img" style="background-image: url(../../AdminWeb/contact-form-03/images/personaltrainer.jpg);">
+            </div>
+        </div>
+    </div>
+
+}

@@ -1,0 +1,77 @@
+<div class="contact-wrap w-100 p-md-5 p-4">
+    <h3 class="mb-4">Private Programs</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Program Name</th>
+                <th>Program Detail</th>
+                <th>Actions</th> <!-- Yeni sütun: İşlem butonları için -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Program 1</td>
+                <td>Detail for Program 1</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">Güncelle</button>
+                    <button class="btn btn-danger btn-sm">Sil</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Program 2</td>
+                <td>Detail for Program 2</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">Güncelle</button>
+                    <button class="btn btn-danger btn-sm">Sil</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Program 3</td>
+                <td>Detail for Program 3</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">Güncelle</button>
+                    <button class="btn btn-danger btn-sm">Sil</button>
+                </td>
+            </tr>
+            <!-- Daha fazla program eklemek için -->
+        </tbody>
+    </table>
+    
+    <!-- Add New Program butonu -->
+    <div class="form-group mt-4">
+        <button class="btn btn-primary">Add New Private Program</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ADMIN LAYOUT HOSGELDINIZ 
+
+<div class="column no-gutters">
+                            <div class="col-md-12 d-flex justify-content-center align-items-center" style="margin-top: 200px; flex-direction: column;">
+                                <h1 class="mb-4 text-center" style="color: white;">SAMTRAINING ADMIN PANELİNE HOŞGELDİNİZ</h1>
+                            </div>
+                        </div> 
+
+
+
+
+
+
+// sectşion style ozellılerı 
+<section class="ftco-section" style="background-image: url(images/gym_3.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;height: 100vh; opacity: 0.8;">

@@ -1,0 +1,89 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/AdminWeb/contact-form-03/css/style.css">
+
+</head>
+<body>
+    <section class="ftco-section" style="background-image: url(../../AdminWeb/contact-form-03/images/gym_3.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;height: 100vh; opacity: 0.8;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Admin Panel</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row mb-5">
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="text">
+                                        <a href="/Admin/PrivateProgramList">
+                                            <button class="private-programs-btn">Private Programs</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="text">
+                                        <a href="/Admin/FreeProgramList">
+                                            <button class="private-programs-btn">Free Programs</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="text">
+                                        <a href="/Admin/GroupLessonsList">
+                                            <button class="private-programs-btn">Group Lessons</button>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="text">
+                                        <a href="/Admin/TrainerList">
+                                            <button class="private-programs-btn">Trainers</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/AdminWeb/contact-form-03/js/jquery.min.js"></script>
+    <script src="~/AdminWeb/contact-form-03/js/popper.js"></script>
+    <script src="~/AdminWeb/contact-form-03/js/bootstrap.min.js"></script>
+    <script src="~/AdminWeb/contact-form-03/js/jquery.validate.min.js"></script>
+    <script src="~/AdminWeb/contact-form-03/js/main.js"></script>
+
+</body>
+</html>
+
+

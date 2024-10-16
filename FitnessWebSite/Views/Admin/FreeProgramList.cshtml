@@ -1,0 +1,44 @@
+﻿@using FitnessWebSite.Models.Classes
+@model List<FreeProgram>
+
+
+@{
+    ViewBag.Title = "FreeProgramList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="contact-wrap w-100 p-md-5 p-4">
+    <h3 class="mb-4">Free Programs</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Program Name</th>
+                <th>Program Detail</th>
+                <th>Program File Path</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.id</td>
+                    <td>@x.freeProgramName</td>
+                    <td>@x.freeProgramDetail</td>
+                    <td>@x.freeProgramFilePath</td>
+                    <td><a href="~/Admin/GetFreeProgram/@x.id" class="btn btn-primary">Update</a></td>
+                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Add New Program butonu -->
+    <div class="form-group mt-4">
+        <button class="btn btn-primary">Add New Free Program</button>
+    </div>
+</div>
+
+
