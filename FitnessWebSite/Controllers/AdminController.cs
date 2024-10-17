@@ -48,7 +48,13 @@ namespace FitnessWebSite.Controllers
             c.SaveChanges();
             return RedirectToAction("PrivateProgramList");
         }
-
+        public ActionResult DeletePrivateProgram(int id)
+        {
+            var pr=c.Programs.Find(id);
+            c.Programs.Remove(pr);
+            c.SaveChanges();
+            return RedirectToAction("PrivateProgramList");   
+        }
         //FREE PROGRAM
 
         public ActionResult FreeProgramList()
@@ -82,7 +88,13 @@ namespace FitnessWebSite.Controllers
             c.SaveChanges();
             return RedirectToAction("FreeProgramList");
         }
-
+        public ActionResult DeleteFreeProgram(int id)
+        {
+            var fr = c.FreePrograms.Find(id);
+            c.FreePrograms.Remove(fr);
+            c.SaveChanges();
+            return RedirectToAction("FreeProgramList");
+        }
         //GROUP LESSONS
 
         public ActionResult GroupLessonsList()
@@ -113,6 +125,13 @@ namespace FitnessWebSite.Controllers
         public ActionResult NewGroupLesson (GroupClass g)
         {
             c.GroupClasses.Add(g);
+            c.SaveChanges();
+            return RedirectToAction("GroupLessonsList");
+        }
+        public ActionResult DeleteGroupLesson(int id)
+        {
+            var gr=c.GroupClasses.Find(id);
+            c.GroupClasses.Remove(gr);
             c.SaveChanges();
             return RedirectToAction("GroupLessonsList");
         }
@@ -149,6 +168,13 @@ namespace FitnessWebSite.Controllers
         public ActionResult NewTrainer(Trainer t)
         {
             c.Trainers.Add(t);
+            c.SaveChanges();
+            return RedirectToAction("TrainerList");
+        }
+        public ActionResult DeleteTrainer(int id)
+        {
+            var tr = c.Trainers.Find(id);
+            c.Trainers.Remove(tr);
             c.SaveChanges();
             return RedirectToAction("TrainerList");
         }
