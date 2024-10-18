@@ -11,6 +11,7 @@ namespace FitnessWebSite.Controllers
     {
         Context c = new Context();
         // GET: Admin
+        [Authorize]
         public ActionResult Index()
         {
             return View();

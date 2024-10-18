@@ -699,9 +699,10 @@ features
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 350px; /* Her program için minimum yüksekliði ayarlayýn */
+    height: 420px; /* Her program için minimum yüksekliði ayarlayýn */
     padding: 20px;
     border: 1px solid #ddd; /* Ýsteðe baðlý: Her programýn etrafýnda bir çerçeve oluþturur */
+    margin-bottom:50px;
 }
 
 .feature-item {
@@ -714,11 +715,13 @@ features
     .feature-item .left-icon img {
         float: left;
         margin-right: 30px;
+        margin-bottom:10px;
     }
 
     .feature-item .right-content {
         display: inline;
         flex-grow: 1;
+        position: relative;
     }
 
         .feature-item .right-content h4 {
@@ -732,8 +735,9 @@ features
         }
 
         .feature-item .right-content a.text-button {
-            margin-top: 7px;
-            display: inline-block;
+            position: absolute; /* Absolute konumlandýrma */
+            bottom: 0; /* En alt kýsma sabitler */
+            left: 0; /* Ýsterseniz sola yaslayabilirsiniz */
             font-size: 13px;
             text-transform: uppercase;
             color: #ed563b;
@@ -1078,6 +1082,7 @@ trainers
 
     #trainers .trainer-item img {
         width: 100%;
+        height:200px;
         border-radius: 5px;
     }
 
