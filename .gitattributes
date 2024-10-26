@@ -7,4 +7,3 @@
 
 # Exclude JavaScript files from language detection
 *.js linguist-vendored
-*.css linguist-vendored
